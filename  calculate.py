@@ -16,6 +16,7 @@ def perform_operation(left, right, operation):
          print(left / right)
         case '%':
          print(left % right)
+         
 
 def calculate ():
  if len(sys.argv) != 4:
@@ -61,22 +62,6 @@ def calculate ():
     print('Division by zero is not allowed')
     sys.exit()
 
-## Option 1
-# if operation == '*':
-#     print(left_operand * right_operand)
-# elif operation == '+':
-#     print(left_operand + right_operand)
-
-## Option 2
-# match operation:
-#     case '*':
-#         print(left_operand * right_operand)
-#     case '+':
-#         print(left_operand + right_operand)
-
-
-## Option 3
-# print(eval(f'{left_operand}{operation}{right_operand}'))
 
 def main (main):
      calculate ()
