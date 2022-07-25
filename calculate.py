@@ -48,7 +48,7 @@ def calculate ():
             first = int(left_operand[0])
             second = left_operand[1]
             third = int(left_operand[2])
-            print (first,second,third)
+            print (first, second, third)
             calc(first, third, second)
         else:
             print (int(sys.argv[1]), sys.argv[2], int(sys.argv[3]))
