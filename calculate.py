@@ -3,30 +3,30 @@ import sys
 
 
 
-def calc(left, right, operation):
+def calc(left_operand, right_operand, operation):
 
     allowed_operations = ['+', '-', '/', '*']
 
     try:
         match operation:
             case '*':
-                print(left * right)
+                print(left_operand * right_operand)
             case '+':
-                print(left + right)
+                print(left_operand + right_operand)
             case '-':
-                print(left - right)
+                print(left_operand - right_operand)
             case '/':
-                if  right == 0:
+                if  right_operand == 0:
                     print('Division by zero is not allowed')
                     sys.exit()
                 else:
-                    print(left / right)
+                    print(left_operand/ right_operand)
             case '%':
-                if  right == 0:
+                if  right_operand == 0:
                     print('Operetion by zero is not allowed')
                     sys.exit()
                 else:
-                    print(left % right)
+                    print(left_operand % right_operand)
     except ValueError:
         
         if operation not in allowed_operations:
@@ -49,10 +49,10 @@ def calculate ():
             second = left_operand[1]
             third = int(left_operand[2])
             print (first,second,third)
-            perform_operation (first, third, second)
+            calc(first, third, second)
         else:
             print (int(sys.argv[1]), sys.argv[2], int(sys.argv[3]))
-            perform_operation (int(sys.argv[1]), int(sys.argv[3]), sys.argv[2])
+            calc(int(sys.argv[1]), int(sys.argv[3]), sys.argv[2])
         
     except ValueError:
         print('Left and Right operands must be int')
