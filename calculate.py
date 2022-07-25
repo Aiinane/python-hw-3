@@ -3,7 +3,7 @@ import sys
 
 
 
-def perform_operation(left, right, operation):
+def calc(left, right, operation):
 
     allowed_operations = ['+', '-', '/', '*']
 
